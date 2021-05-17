@@ -1,0 +1,23 @@
+.popup__container {
+  margin: 0 auto;
+  max-width: 430px;
+  width: 88.125vw;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  animation: appearPopup 250ms ease-in;
+}
+
+@keyframes appearPopup {
+  0% {
+    transform: translate(-50%, calc(-50% - 10%));
+    opacity: 0;
+  }
+}

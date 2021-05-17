@@ -1,0 +1,15 @@
+.element__title {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+
+  padding: 0;
+  margin: 0 0 26px 21px;
+  width: 198px;
+  min-height: 28.8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

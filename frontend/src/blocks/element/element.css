@@ -1,0 +1,8 @@
+.element {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 282px;
+  color: black;
+  position: relative;
+  overflow: hidden;
+}

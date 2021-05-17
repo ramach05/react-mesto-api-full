@@ -1,0 +1,8 @@
+.element__photo {
+  width: 282px;
+  height: 282px;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  margin: 0 0 25px;
+}

@@ -1,0 +1,30 @@
+.buttonSubmit {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+
+  color: #ffffff;
+  background-color: #000;
+  min-height: 46px;
+  width: calc(238 / 282 * 100%);
+  margin: 0 auto 25px;
+  cursor: pointer;
+  border-radius: 2px;
+  border: none;
+}
+
+.buttonSubmit:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+  .buttonSubmit {
+    font-size: 18px;
+    line-height: 22px;
+    min-height: 50px;
+    margin: 0 auto 40px;
+  }
+}

@@ -1,0 +1,6 @@
+.element__box-in-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -7px 21px 0 0;
+}

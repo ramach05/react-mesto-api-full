@@ -1,0 +1,23 @@
+.header__email {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+
+  margin: 5px 24px 0 0;
+  margin-left: auto;
+  padding: 0;
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}
+
+@media screen and (min-width: 768px) {
+  .header__email {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 10px 24px 0 0;
+    margin-left: auto;
+  }
+}

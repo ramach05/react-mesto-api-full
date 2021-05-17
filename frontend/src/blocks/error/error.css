@@ -1,0 +1,17 @@
+.error {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #ff0000;
+  margin: 0 auto;
+  padding: 0;
+  width: calc(238 / 282 * 100%);
+  min-height: 30px;
+}
+
+.popup__container .error:nth-child(2n) {
+  min-height: 45px;
+}

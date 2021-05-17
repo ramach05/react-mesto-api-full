@@ -1,0 +1,21 @@
+.auth__buttonSubmit {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+
+  margin: 0 0 15px;
+  padding: 0;
+  height: 46px;
+}
+
+@media screen and (min-width: 768px) {
+  .auth__buttonSubmit {
+    height: 50px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

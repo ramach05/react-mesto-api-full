@@ -1,0 +1,15 @@
+.popup__container_photo {
+  max-width: 75vw;
+  width: fit-content;
+  background-color: transparent;
+  display: inline;
+  
+  animation: appearPopupPhoto 250ms ease-in;
+}
+
+@keyframes appearPopupPhoto {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+}
