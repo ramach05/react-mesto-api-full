@@ -4,13 +4,15 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext";
 function Card(props) {
   const currentUserContext = useContext(CurrentUserContext);
 
-  const isOwn = props.card.owner._id === currentUserContext.id;
+  const isOwn = props.card.owner === currentUserContext.id;
   const cardDeleteButtonClassName = `element__trash-button ${
     isOwn ? "element__trash-button_visible" : "element__trash-button_hidden"
   }`;
 
   const isLiked = props.card.likes.some(
-    (like) => like._id === currentUserContext.id
+    (like) => {
+      return like === currentUserContext.id
+    }
   );
 
   const cardLikeButtonClassName = `element__like-button ${

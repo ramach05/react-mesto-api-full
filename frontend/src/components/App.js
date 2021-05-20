@@ -51,11 +51,12 @@ function App() {
     api
       .getUserInfo()
       .then((myData) => {
+        // console.log('myData :>> ', myData);
         setCurrentUser({
-          name: myData.name,
-          about: myData.about,
-          avatar: myData.avatar,
-          id: myData._id,
+          name: myData.user.name,
+          about: myData.user.about,
+          avatar: myData.user.avatar,
+          id: myData.user._id,
         });
 
         setIsGetUserInfo(true);
@@ -72,7 +73,7 @@ function App() {
     api
       .getInitialCards()
       .then((cardsFromApi) => {
-        const renderCards = cardsFromApi.map((item) => {
+        const renderCards = cardsFromApi.cards.map((item) => {
           return {
             _id: item._id,
             link: item.link,
@@ -82,7 +83,7 @@ function App() {
           };
         });
 
-        setCards([...renderCards]);
+        setCards([...renderCards.reverse()]);
       })
       .catch((err) => {
         console.log(err);
@@ -93,14 +94,16 @@ function App() {
   }, []);
 
   useEffect(() => {
+
     const token = localStorage.getItem("token");
 
     if (localStorage.getItem("token")) {
       auth
         .checkToken(token)
         .then((res) => {
-          if (res._id === currentUser.id) {
-            setEmail(res.data.email);
+          // console.log('res :>> ', res);
+          if (res.user._id === currentUser.id) {
+            setEmail(res.user.email);
             setIsLoggedIn(true);
           }
         })
@@ -175,8 +178,8 @@ function App() {
       .setUserInfo({ name, about })
       .then((res) => {
         setCurrentUser({
-          name: res.name,
-          about: res.about,
+          name: res.user.name,
+          about: res.user.about,
           avatar: currentUser.avatar,
           id: currentUser.id,
         });
@@ -196,7 +199,7 @@ function App() {
         link,
       })
       .then((newCard) => {
-        setCards([newCard, ...cards]);
+        setCards([newCard.card, ...cards]);
 
         closeAllPopups(e, { isFormSubmit: true });
         setIsLoading(false);
@@ -229,7 +232,7 @@ function App() {
         .deleteLikeTargetCard(card._id)
         .then((newCard) => {
           setCards((state) =>
-            state.map((c) => (c._id === card._id ? newCard : c))
+            state.map((c) => (c._id === card._id ? newCard.card : c))
           );
         })
         .catch((err) => {
@@ -240,7 +243,7 @@ function App() {
         .likeTargetCard(card._id)
         .then((newCard) => {
           setCards((state) =>
-            state.map((c) => (c._id === card._id ? newCard : c))
+            state.map((c) => (c._id === card._id ? newCard.card : c))
           );
         })
         .catch((err) => {

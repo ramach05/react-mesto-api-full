@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ramach05.github.io/express-mesto",
+  "homepage": "https://api.api.domainname.zone.nomoredomains.icu",
   "author": "Roman Kovalenko <mrroman6552@yandex.ru> (https://github.com/ramach05)",
   "description": "The project 'express-mesto' was created using the Node.js technology.",
   "name": "express-mesto",
@@ -8,6 +8,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "celebrate": "^14.0.0",
+    "cors": "^2.8.5",
     "dotenv": "^9.0.0",
     "express": "^4.17.1",
     "express-rate-limit": "^5.2.6",
@@ -26,8 +27,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint .",
-    "start": "node app.js 3000 ",
-    "dev": "nodemon app.js 3000"
+    "start": "node app.js 3001 ",
+    "dev": "nodemon app.js 3001"
   },
   "repository": {
     "type": "git",

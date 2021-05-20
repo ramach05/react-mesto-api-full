@@ -15,9 +15,9 @@
 
 ## Используемые новые технологии
 
-* eslint;
-* nodemon;
-* mongoose;
-* express;
-* Postman;
-* MongoDB;
+- eslint;
+- nodemon;
+- mongoose;
+- express;
+- Postman;
+- MongoDB;

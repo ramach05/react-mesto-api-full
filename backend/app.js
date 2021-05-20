@@ -3,12 +3,13 @@ const mongoose = require("mongoose");
 
 const app = express();
 const {
-	PORT = 3000,
+	PORT = 3001,
 	MONGO_URL = "mongodb://localhost:27017/mestodb",
 } = process.env;
 const { celebrate, Joi } = require("celebrate"); //для валидации запросов
 const rateLimit = require("express-rate-limit");
 const helmet = require("helmet");
+const cors = require("cors");
 const { usersRouter } = require("./routes/users");
 const { cardsRouter } = require("./routes/cards");
 const { login, createUser } = require("./controllers/users");
@@ -18,7 +19,7 @@ const Users = require("./models/user");
 
 const limiter = rateLimit({
 	windowMs: 15 * 60 * 1000, //15 minutes
-	max: 100, //limit each IP to 100 requests per windowMs
+	max: 500, //limit each IP to 500 requests per windowMs
 });
 
 //подключаемся к серверу mongo
@@ -32,8 +33,12 @@ mongoose.connect(MONGO_URL, {
 app.use(limiter); //защита от DoS-атак
 app.use(helmet()); //помогает защитить приложение от некоторых широко известных веб-уязвимостей путем соответствующей настройки заголовков HTTP
 app.use(express.json()); //добавляется в запрос поле req.body
+app.use(cors()); //защита роутов
 
-//запросы
+app.use((req, res, next) => {
+	console.log(req.method, req.path);
+	next();
+});
 app.post("/signin",
 	celebrate({
 		body: Joi.object().keys({
@@ -57,10 +62,6 @@ app.post("/signup",
 	createUser);
 
 //мидлвэры
-app.use((req, res, next) => {
-	console.log(req.method, req.path);
-	next();
-});
 app.use(auth, usersRouter);
 app.use(auth, cardsRouter);
 app.use("*", (req, res, next) => Users.findOne({})

@@ -35,7 +35,9 @@
 * WebPack;
 * Promise;
 * React Hooks;
-* JSX.
+* JSX;
+* REST;
+* CORS.
 
 ## **Бэкенд**
 
@@ -54,20 +56,24 @@
 
 ### _Используемые технологии:_
 
-* eslint;
+* postman;
+* mongoDB;
+* ESLint;
 * nodemon;
 * mongoose;
 * express;
-* postman;
-* mongoDB;
+* celebrate;
+* JWT;
+* helmet;
 * pm2;
 * nginx;
-* Виртуальная машина.
+* Виртуальная машина на Яндекс.Облако.
 
 <br>
 
 ---
 
-IP-адрес сервера: `84.252.140.19`
+Публичный IP-адрес сервера: [84.252.140.19](https://84.252.140.19/
+ "https://84.252.140.19/").
 
-[Ссылку](https://api.domainname.zone.nomoredomains.icu/ "Mesto") на проект прикрепляю.
+[Ссылка](https://api.domainname.zone.nomoredomains.icu/ "Проект Mesto") на домен сервера.

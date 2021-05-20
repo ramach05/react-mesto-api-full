@@ -1,9 +1,11 @@
 import Api from "./api";
 
 export const api = new Api({
-  baseUrl: "https://mesto.nomoreparties.co/v1/cohort-20",
+  baseUrl: "http://localhost:3001",
   headers: {
-    authorization: "5b66fd06-2588-48e1-9a08-4e052bdf34cc",
+    authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGE0OTE5YjdjMDk1YjNmMGM5Y2M2NDkiLCJpYXQiOjE2MjEzOTgxMTIsImV4cCI6MTYyMjAwMjkxMn0.9dcMdor8SetpNNmPq41N23Dv8mr3YVPqNfj8MnK8kcA",
     "Content-Type": "application/json",
   },
 });
+
+// 5b66fd06-2588-48e1-9a08-4e052bdf34cc

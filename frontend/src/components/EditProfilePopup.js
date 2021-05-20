@@ -24,8 +24,8 @@ function EditProfilePopup({ onUpdateUser, isOpen, onClose }) {
       .getUserInfo()
       .then((myData) => {
         setState({
-          name: myData.name,
-          description: myData.about,
+          name: myData.user.name,
+          description: myData.user.about,
         });
       })
       .catch((err) => {
@@ -37,6 +37,8 @@ function EditProfilePopup({ onUpdateUser, isOpen, onClose }) {
     e.preventDefault();
     setIsLoading(true);
 
+    console.log('state :>> ', state);
+    
     onUpdateUser(e, setIsLoading, {
       name: state.name,
       about: state.description,

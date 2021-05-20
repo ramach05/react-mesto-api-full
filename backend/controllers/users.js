@@ -34,9 +34,9 @@ exports.login = (req, res, next) => {
 			if (!user) {
 				throw new Unauthorized("Неправильные почта или пароль");
 			}
-			//сравниваем пароль с хешем в базе (работает асинхронно, в then придёт true при совпадении)
+
 			return bcrypt
-				.compare(password, user.password)
+				.compare(password, user.password) //сравниваем пароль с хешем в базе (работает асинхронно, в then придёт true при совпадении)
 				.then((matched) => {
 					if (!matched) {
 						throw new Unauthorized("Неправильные почта или пароль");
@@ -46,7 +46,7 @@ exports.login = (req, res, next) => {
 						JWT_SECRET_KEY,
 						{ expiresIn: "7d" }, //объект опций, через сколько токен будет просрочен
 					);
-					return res.send({ message: token });
+					return res.send({ token });
 				})
 				.catch(next);
 		})

@@ -1,8 +1,8 @@
 {
-  "homepage": "http://api.domainname.zone.nomoredomains.icu/",
+  "homepage": "https://api.domainname.zone.nomoredomains.icu",
   "name": "react-mesto-auth",
   "author": "Roman Kovalenko <mrroman6552@yandex.ru> (https://github.com/ramach05)",
-  "description": "The project 'Mesto' with registration and authorization was created using the React.js technology.",
+  "description": "The project 'react-mesto-auth' was created using the React.js technology.",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,8 +16,12 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
   },
+    "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "nodemon": "^2.0.7"
+  },
   "scripts": {
-    "start": "react-scnodeart",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -41,10 +45,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^3.1.0",
-    "nodemon": "^2.0.7"
   },
   "main": "index.js",
   "repository": {
