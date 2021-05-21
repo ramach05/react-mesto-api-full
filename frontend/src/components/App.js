@@ -24,9 +24,8 @@ function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
-  const [isConfirmDeletePopupOpen, setIsConfirmDeletePopupOpen] = useState(
-    false
-  );
+  const [isConfirmDeletePopupOpen, setIsConfirmDeletePopupOpen] =
+    useState(false);
 
   const [isGetUserInfo, setIsGetUserInfo] = useState(false);
   const [isGetInitialCards, setIsGetInitialCards] = useState(false);
@@ -48,10 +47,10 @@ function App() {
   const [isSingInPage, setIsSingInPage] = useState(true);
 
   useEffect(() => {
+    api.updateHeaders();
     api
       .getUserInfo()
       .then((myData) => {
-        // console.log('myData :>> ', myData);
         setCurrentUser({
           name: myData.user.name,
           about: myData.user.about,
@@ -67,9 +66,10 @@ function App() {
       .finally(() => {
         setIsGetUserInfo(true);
       });
-  }, []);
+  }, [isLoggedIn]);
 
   useEffect(() => {
+    api.updateHeaders();
     api
       .getInitialCards()
       .then((cardsFromApi) => {
@@ -91,17 +91,16 @@ function App() {
       .finally(() => {
         setIsGetInitialCards(true);
       });
-  }, []);
+  }, [isLoggedIn]);
 
   useEffect(() => {
-
     const token = localStorage.getItem("token");
 
     if (localStorage.getItem("token")) {
       auth
         .checkToken(token)
         .then((res) => {
-          // console.log('res :>> ', res);
+          api.updateHeaders();
           if (res.user._id === currentUser.id) {
             setEmail(res.user.email);
             setIsLoggedIn(true);
