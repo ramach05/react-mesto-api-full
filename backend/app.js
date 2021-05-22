@@ -38,10 +38,17 @@ app.use(cors()); //защита роутов
 
 app.use(requestLogger); //логгер запросов
 
-app.use((req, res, next) => {
+app.use((req, res, next) => { //вывод в консоль методда и пути
 	console.log(req.method, req.path);
 	next();
 });
+
+app.get("/crash-test", () => { //краш-тест сервера. pm2 должен восстанавливать сервер после данного запроса
+	setTimeout(() => {
+		throw new Error("Сервер сейчас упадёт"); //необработанная ошибка вызывает событие uncaughtException
+	}, 0);
+});
+
 app.post("/signin",
 	celebrate({
 		body: Joi.object().keys({
