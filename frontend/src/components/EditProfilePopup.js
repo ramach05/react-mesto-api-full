@@ -37,8 +37,6 @@ function EditProfilePopup({ onUpdateUser, isOpen, onClose }) {
     e.preventDefault();
     setIsLoading(true);
 
-    console.log('state :>> ', state);
-    
     onUpdateUser(e, setIsLoading, {
       name: state.name,
       about: state.description,

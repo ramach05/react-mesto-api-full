@@ -45,6 +45,3 @@ cardsRouter.delete("/cards/:cardId/likes",
 	dislikeCard);
 
 exports.cardsRouter = cardsRouter;
-
-//  console.log("err.name :>> ", err.name);
-//  console.log("err.message :>> ", err.message);

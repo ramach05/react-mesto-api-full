@@ -23,8 +23,6 @@ exports.createCard = (req, res, next) => {
 			return res.status(200).send({ card });
 		})
 		.catch((err) => {
-			console.log("err.name :>> ", err.name);
-			console.log("err.message :>> ", err.message);
 			if (err.name === "ValidationError") {
 				throw new BadRequest(err.message);
 			}
