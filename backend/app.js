@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 const {
-	PORT = "https://api.api.domainname.zone.nomoredomains.icu",
+	PORT = 3001,
 	MONGO_URL = "mongodb://localhost:27017/mestodb",
 } = process.env;
 const { celebrate, Joi } = require("celebrate"); //для валидации запросов
