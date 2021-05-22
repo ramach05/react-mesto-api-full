@@ -16,6 +16,7 @@ const { login, createUser } = require("./controllers/users");
 const { auth } = require("./middlewares/auth");
 const NotFoundError = require("./errors/not-found-err");
 const Users = require("./models/user");
+const { requestLogger, errorLogger } = require("./middlewares/logger");
 
 const limiter = rateLimit({
 	windowMs: 15 * 60 * 1000, //15 minutes
@@ -34,6 +35,8 @@ app.use(limiter); //защита от DoS-атак
 app.use(helmet()); //помогает защитить приложение от некоторых широко известных веб-уязвимостей путем соответствующей настройки заголовков HTTP
 app.use(express.json()); //добавляется в запрос поле req.body
 app.use(cors()); //защита роутов
+
+app.use(requestLogger); //логгер запросов
 
 app.use((req, res, next) => {
 	console.log(req.method, req.path);
@@ -70,6 +73,8 @@ app.use("*", (req, res, next) => Users.findOne({})
 	})
 	.catch(next)); //эквивалентно catch(err => next(err))
 
+app.use(errorLogger); //логгер ошибок
+
 //централизованная обработка ошибок
 app.use((err, req, res, next) => {
 	const { statusCode = 500, message } = err;
@@ -84,7 +89,7 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-	console.log(`App listening on port ${PORT}`); //Если всё работает, консоль покажет, какой порт приложение слушает
+	console.log(`App listening on port ${PORT}`); //если всё работает, консоль покажет, какой порт приложение слушает
 });
 
 module.exports = PORT;
