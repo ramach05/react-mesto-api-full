@@ -160,7 +160,7 @@ function App() {
         setCurrentUser({
           name: currentUser.name,
           about: currentUser.about,
-          avatar: res.avatar,
+          avatar: res.user.avatar,
           id: currentUser.id,
         });
 
