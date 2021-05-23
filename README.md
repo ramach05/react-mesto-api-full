@@ -30,8 +30,7 @@
 * HTML, CSS, JavaScript, React.js;
 * Адапливная верстка;
 * БЭМ-методология;
-* Анимация;
-* Git;
+* Анимация и трансформация;
 * WebPack;
 * Promise;
 * React Hooks;
@@ -44,9 +43,9 @@
 Рeализован с помощью `Node.js`.
 
 * `/routes` — папка с файлами роутера, `/controllers` — с файлами контроллеров пользователя и карточки, `/models` — с файлами описания схем пользователя и карточки;
-* Все запросы и ответы записываются в файл `request.log
+* Все запросы и ответы записываются в файл `logs/request.log
 `;
-* Все ошибки записываются в файл `error.log`;
+* Все ошибки записываются в файл `logs/error.log`.
 
 ### _Запуск проекта:_
 
@@ -56,17 +55,19 @@
 
 #### _Используемые технологии:_
 
-* postman;
-* mongoDB;
+* Postman;
+* MongoDB;
 * ESLint;
-* nodemon;
-* mongoose;
-* express;
-* celebrate;
+* Nodemon;
+* Mongoose;
+* Express;
+* Celebrate;
 * JWT;
-* helmet;
-* pm2;
-* nginx;
+* Helmet;
+* PM2;
+* Nginx;
+* Защита от DoS-атак;
+* Централизованная обработка ошибок;
 * Виртуальная машина на Яндекс.Облако.
 
 <br>
@@ -76,4 +77,4 @@
 Публичный IP-адрес сервера: [84.252.140.19](https://84.252.140.19/
  "https://84.252.140.19/").
 
-[Ссылка](https://api.domainname.zone.nomoredomains.icu/ "Проект Mesto") на домен сервера.
+[ССЫЛКА](https://api.domainname.zone.nomoredomains.icu/ "Проект Mesto") на сайт.
