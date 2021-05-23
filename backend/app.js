@@ -17,6 +17,7 @@ const { auth } = require("./middlewares/auth");
 const NotFoundError = require("./errors/not-found-err");
 const Users = require("./models/user");
 const { requestLogger, errorLogger } = require("./middlewares/logger");
+const { handleErrors } = require("./errors/handleErrors");
 
 const limiter = rateLimit({
 	windowMs: 15 * 60 * 1000, //15 minutes
@@ -82,17 +83,7 @@ app.use("*", (req, res, next) => Users.findOne({})
 app.use(errorLogger); //логгер ошибок
 
 //централизованная обработка ошибок
-app.use((err, req, res, next) => {
-	const { statusCode = 500, message } = err;
-	res
-		.status(statusCode)
-		.send({
-			message: statusCode === 500
-				? "На сервере произошла ошибка"
-				: message,
-		});
-	return next();
-});
+app.use(handleErrors);
 
 app.listen(PORT, () => {
 	console.log(`App listening on port ${PORT}`); //если всё работает, консоль покажет, какой порт приложение слушает
