@@ -31,12 +31,11 @@ mongoose.connect(MONGO_URL, {
 	useUnifiedTopology: true,
 });
 
-app.use(limiter); //защита от DoS-атак
 app.use(helmet()); //помогает защитить приложение от некоторых широко известных веб-уязвимостей путем соответствующей настройки заголовков HTTP
 app.use(express.json()); //добавляется в запрос поле req.body
 app.use(cors()); //защита роутов
-
 app.use(requestLogger); //логгер запросов
+app.use(limiter); //защита от DoS-атак
 
 app.use((req, res, next) => { //вывод в консоль методда и пути
 	console.log(req.method, req.path);
