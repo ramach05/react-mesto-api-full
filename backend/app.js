@@ -71,7 +71,6 @@ app.post("/signup",
 	}),
 	createUser);
 
-//мидлвэры
 app.use(auth, usersRouter);
 app.use(auth, cardsRouter);
 app.use("*", (req, res, next) => Users.findOne({})
@@ -82,8 +81,7 @@ app.use("*", (req, res, next) => Users.findOne({})
 
 app.use(errorLogger); //логгер ошибок
 
-//централизованная обработка ошибок
-app.use(handleErrors);
+app.use(handleErrors); //централизованная обработка ошибок
 
 app.listen(PORT, () => {
 	console.log(`App listening on port ${PORT}`); //если всё работает, консоль покажет, какой порт приложение слушает
