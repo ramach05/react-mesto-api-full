@@ -54,7 +54,7 @@ function Register({
         className="auth__input"
         placeholder="Пароль"
         required
-        minLength={4}
+        minLength={8}
         ref={inputPasswordRef}
       />
       <button type="submit" className="auth__buttonSubmit">
