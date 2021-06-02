@@ -1,7 +1,7 @@
 {
   "homepage": "https://api.api.domainname.zone.nomoredomains.icu",
   "author": "Roman Kovalenko <mrroman6552@yandex.ru> (https://github.com/ramach05)",
-  "description": "The project 'express-mesto' was created using the Node.js technology.",
+  "description": "The project 'express-mesto' was created using the Node.js technology",
   "name": "express-mesto",
   "version": "1.0.0",
   "main": "app.js",
@@ -28,7 +28,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint .",
-    "start": "node app.js 3001 ",
+    "start": "node app.js 3001",
     "dev": "nodemon app.js 3001"
   },
   "repository": {
