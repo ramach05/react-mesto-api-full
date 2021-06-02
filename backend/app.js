@@ -38,7 +38,7 @@ app.use(cors()); //защита роутов
 app.use(requestLogger); //логгер запросов
 app.use(limiter); //защита от DoS-атак
 
-app.use((req, res, next) => { //вывод в консоль методда и пути
+app.use((req, res, next) => { //вывод в консоль метода и пути запроса
 	console.log(req.method, req.path);
 	next();
 });
