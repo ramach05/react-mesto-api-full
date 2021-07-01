@@ -1,4 +1,12 @@
-.element__like-count{
+.element__like-count {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+
   margin: 0;
   padding: 0;
 }
