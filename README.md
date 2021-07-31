@@ -74,12 +74,11 @@
 
 ---
 
-Публичный IP-адрес сервера: [84.252.140.19](https://84.252.140.19/
- "https://84.252.140.19/").
- 
- [Ссылка](https://api.api.domainname.zone.nomoredomains.icu/ "Проект Mesto") на домен.
-
 [ССЫЛКА](https://api.domainname.zone.nomoredomains.icu/ "Проект Mesto") на сайт.
+
+Публичный IP-адрес сервера: [84.252.140.19](https://84.252.140.19/ "https://84.252.140.19/").
+
+[Ссылка](https://api.api.domainname.zone.nomoredomains.icu/ "Проект Mesto") на домен.
 
 <br>
 
