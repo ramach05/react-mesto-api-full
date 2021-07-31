@@ -10,7 +10,7 @@
 
 ## **Фронтенд**
 
-Реализован с помощью `React.js`;
+Реализован с помощью [![React.js](https://img.shields.io/badge/React.js-391468?style=flat&logo=React)](https://reactjs.org/).
 
 * Сайт является адаптивным, умеет подстраиваться под экраны разных разрешений;
 * 30 карточек создаются при помощи Api-запроса;
@@ -40,7 +40,7 @@
 
 ## **Бэкенд**
 
-Рeализован с помощью `Node.js`.
+Рeализован с помощью [![Node.js](https://img.shields.io/badge/Node.js-391468?style=flat&logo=node.js)](https://nodejs.org/en/) [![Express](https://img.shields.io/badge/Express-391468?style=flat&logo=express)](https://expressjs.com/).
 
 * `/routes` — папка с файлами роутера, `/controllers` — с файлами контроллеров пользователя и карточки, `/models` — с файлами описания схем пользователя и карточки;
 * Все запросы и ответы записываются в файл `logs/request.log
@@ -76,5 +76,19 @@
 
 Публичный IP-адрес сервера: [84.252.140.19](https://84.252.140.19/
  "https://84.252.140.19/").
+ 
+ [Ссылка](https://api.api.domainname.zone.nomoredomains.icu/ "Проект Mesto") на домен.
 
 [ССЫЛКА](https://api.domainname.zone.nomoredomains.icu/ "Проект Mesto") на сайт.
+
+<br>
+
+<div align="center">
+  <img src="https://i.postimg.cc/9QwgfdGQ/image.png" alt="screenshot" />
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://i.postimg.cc/mrf4Z21K/image.png" alt="screenshot" />
+</div>
