@@ -8,7 +8,7 @@
 
 Проектом является одностраничный сайт `Mesto`, который является интерактивной страницей, куда можно добавлять фотографии, удалять их и ставить лайки, а также, менять информацию о пользователе. Перед этим нужно зарегистрироваться и авторизоваться на сайте.
 
-## **Фронтенд**
+### **Фронтенд**
 
 Реализован с помощью [![React.js](https://img.shields.io/badge/React.js-391468?style=flat&logo=React)](https://reactjs.org/).
 
@@ -25,7 +25,7 @@
 * Реализованы прелоадеры и спиннер с загрузочной анимацией;
 * Разметка портирована в JSX.
 
-#### _Используемые технологии:_
+#### Используемые технологии:
 
 * HTML, CSS, JavaScript, React.js;
 * Адапливная верстка;
@@ -38,7 +38,7 @@
 * REST;
 * CORS.
 
-## **Бэкенд**
+### **Бэкенд**
 
 Рeализован с помощью [![Node.js](https://img.shields.io/badge/Node.js-391468?style=flat&logo=node.js)](https://nodejs.org/en/) [![Express](https://img.shields.io/badge/Express-391468?style=flat&logo=express)](https://expressjs.com/).
 
@@ -53,7 +53,7 @@
 
 `npm run dev` — запускает сервер с hot-reload.
 
-#### _Используемые технологии:_
+#### Используемые технологии:
 
 * Postman;
 * MongoDB;
@@ -74,7 +74,7 @@
 
 ---
 
-[ССЫЛКА](https://api.domainname.zone.nomoredomains.icu/ "Проект Mesto") на сайт.
+[ССЫЛКА](https://api.domainname.zone.nomoredomains.icu/ "Проект Mesto") на законченный проект.
 
 Публичный IP-адрес сервера: [84.252.140.19](https://84.252.140.19/ "https://84.252.140.19/").
 
