@@ -1,3 +1,6 @@
+> **Archived.** Learning project from 2021, kept as a starting point.
+> Full-stack Mesto: React frontend and Express/MongoDB backend with auth in one repo. Original README below.
+
 # **Mesto**
 
 Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд располагается в директории `backend/`, а фронтенд - в `frontend/`.
