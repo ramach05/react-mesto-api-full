@@ -80,7 +80,7 @@
 
 [ССЫЛКА](https://api.domainname.zone.nomoredomains.icu/ "Проект Mesto") на завершенный проект.
 
-Публичный IP-адрес сервера: [84.252.140.19](https://84.252.140.19/ "https://84.252.140.19/").
+Публичный IP-адрес сервера: `<server-ip>`.
 
 [Ссылка](https://api.api.domainname.zone.nomoredomains.icu/ "Проект Mesto") на домен.
 
